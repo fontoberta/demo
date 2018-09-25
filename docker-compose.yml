@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build: .
+    container_name: fontoberta-demo
+    ports:
+      - "80:80"
+    networks:
+      - fontoberta
+networks:
+  fontoberta:
+    external:
+      name: fontoberta-network

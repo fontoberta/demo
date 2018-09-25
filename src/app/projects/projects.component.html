@@ -1,0 +1,33 @@
+<div id="content-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item "><a routerLink="/groups">Groups</a></li>
+        <li class="breadcrumb-item ">{{group}}</li>
+        <li class="breadcrumb-item active">Projects</li>
+      </ol>
+
+      <!-- Icon Cards-->
+      <div class="row">
+        <div class="col-4 padding-projects" *ngFor="let project of projects">
+          <a routerLink="/groups/{{group}}/projects/{{project.slug}}/sections/">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas fa-fw fa-project-diagram"></i>
+              </div>
+              <div class="mr-5">{{project.name}}</div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+
+  </div>
+  <!-- /.content-wrapper -->

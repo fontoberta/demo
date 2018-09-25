@@ -1,0 +1,33 @@
+<div id="content-wrapper">
+
+    <div class="container-fluid">
+
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Groups</li>
+      </ol>
+
+      <!-- Icon Cards-->
+      <div class="row">
+
+        <div class="col-4 padding-groups" *ngFor="let group of groups">
+          <a routerLink="/groups/{{group.name}}/projects/">
+          <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card-body">
+              <div class="card-body-icon">
+                <i class="fas fa-fw fa-sitemap"></i>
+              </div>
+              <div class="mr-5">{{group.name}}</div>
+            </div>
+          </div>
+         </a>
+        </div>
+       
+      </div>
+
+    </div>
+    <!-- /.container-fluid -->
+
+
+  </div>
+  <!-- /.content-wrapper -->

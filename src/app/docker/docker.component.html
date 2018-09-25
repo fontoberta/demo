@@ -1,0 +1,30 @@
+        
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              Docker
+            </li>
+            <li class="breadcrumb-item active">Containers</li>
+          </ol>
+
+          <!-- Icon Cards-->
+          <div class="row">
+            <div class="col-4 padding-container" *ngFor="let container of containers">
+              <div class="card text-white {{container['colorclass']}} o-hidden h-100">
+                <div class="card-body">
+                  <div class="card-body-icon">
+                    <i class="fas fa-fw fa-power-off"></i>
+                  </div>
+                  <div class="mr-5">{{container['name']}}</div>
+                </div>
+                <a class="card-footer text-white clearfix small z-1"  (click)="move_container(container['id'])">
+                  <span class="float-left">
+                    <i class="fas fa-power-off"> {{getOperation(container['status'])}}</i>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
